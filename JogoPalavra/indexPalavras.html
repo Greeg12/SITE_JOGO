@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+
+    <link rel="stylesheet" href="stylePalavra.css">
+</head>
+
+
+<body>
+
+        <!--Aqui começa o Header-->
+
+        <header class="max-largura bg" id="Home">
+            <div class="container">
+                <nav class="menu">
+                    <a href="/index.html"><div class="logo"></div></a>
+                    <div class="AreaPrincipal-menu">
+                        <ul>
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="#Service"></a></li>
+                            <li><a href="#Contato"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mobile-menu" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                        <ul id="myLinks">
+                            <li><a href="#Home">Home</a></li>
+                            <li><a href="#Service">Destaque</a></li>
+                            <li><a href="#Contato">Contato</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                </div>
+            </header>
+<main>
+    <section class="max-largura" id="Conteudo">
+        <div class="container bg2">
+            <div class="containerPalavra">
+                <div class="editPalavras responsividadePalavras">
+                  <span>J</span>
+                  <span>O</span>
+                  <span>G</span>
+                  <span>O</span>
+                  <div class="espacoTitulo">
+                    <span>P</span>
+                    <span>A</span>
+                    <span>L</span>
+                    <span>A</span>
+                    <span>V</span>
+                    <span>R</span>
+                    <span>A</span>
+                    <span>S</span>
+                  </div>
+                </div>
+            </div>
+          
+              <div class="palavrasJogo">
+
+                <div class="frase1">
+                    O NEYMAR CAIU <b id="nomeDoJogo">MUITO</b><br />
+                </div>   
+                <div class="frase1">
+                    GOSTA DO <b id="nomeDoJogo2">NEYMAR</b> NÉ<br />
+                </div>
+                <div class="frase1">
+                    O NEYMAR É <b id="nomeDoJogo3">SEGREDO</b><br />
+                </div>
+                <div class="frase1">
+                    ALI <b id="nomeDoJogo4">OLHA</b> O NEYMAR<br />
+                </div>
+                <div class="frase1">
+                    PROCURANDO POR <b id="nomeDoJogo5">NEY</b><br />
+                </div>
+              </div>
+          
+              <input id="nomeDigitado" class="inputPalavra" type="text" name="Nome" maxlength="10"><br /><br />
+          
+              <input type="button" class="botaoPalavra" value="Atualize" onclick="mudeNome()" />
+        </div>
+    </section>
+</main>
+    <!--Aqui Começa o footer-->
+
+    <footer>
+        <div class="container">
+            <img src="../image/logo.png" alt="">
+            <p class="text-pq">Copyright © 2023 <span class="color-laranja">GGGAME</span> All Rights Reserved</p>
+            <p class="texto-pq">Tel: 4002-5922</p>
+        </div>
+    </footer>
+
+    <!--Aqui Termina o footer-->
+
+    <script src="scriptPalavra.js"></script>
+</body>
+</html>

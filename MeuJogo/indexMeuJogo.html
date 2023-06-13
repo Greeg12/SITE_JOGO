@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Dino</title>
+
+    <link rel="stylesheet" href="styleMeuJogo.css">
+</head>
+
+<body>
+
+    <!--Aqui começa o Header-->
+
+    <header class="max-largura bg" id="Home">
+        <div class="container">
+            <nav class="menu">
+                <a href="/index.html">
+                    <div class="logo"></div>
+                </a>
+                <div class="AreaPrincipal-menu">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#Service"></a></li>
+                        <li><a href="#Contato"></a></li>
+                    </ul>
+                </div>
+
+                <div class="mobile-menu" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    <ul id="myLinks">
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#Service">Destaque</a></li>
+                        <li><a href="#Contato">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="max-largura " id="Conteudo">
+        <div class="container bg2">
+
+
+            <div class="personagem-container">
+                <div>
+                    <img alt="Imagem 1" src="../image/5.png">
+                    <button onclick="trocarImagens()">Selecionar</button>
+                </div>
+
+                <div>
+                    <img alt="Imagem 1" src="../image/6.png">
+                    <button onclick="trocarImagens2()">Selecionar</button>
+                </div>
+
+                <div>
+                    <img alt="Imagem 1" src="../image/7.png">
+                    <button onclick="trocarImagens3()">Selecionar</button>
+                </div>
+
+                <div>
+                    <img alt="Imagem 1" src="../image/8.png">
+                    <button onclick="trocarImagens4()">Selecionar</button>
+                </div>
+            </div>
+            <div class="game">
+                <span class="score"></span>
+                <div class="carinha">
+                    <img src="../image/dino2.gif" id="minhaImagem" alt="">
+                </div>
+                <div class="cacto"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--Aqui Começa o footer-->
+
+    <footer>
+        <div class="container">
+            <img src="../image/logo.png" alt="">
+            <p class="text-pq">Copyright © 2023 <span class="color-laranja">GGGAME</span> All Rights Reserved</p>
+            <p class="texto-pq">Tel: 4002-5922</p>
+        </div>
+    </footer>
+
+    <!--Aqui Termina o footer-->
+
+    <script src="scriptMeuJogo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo - Forca</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="styleForca.css">
+</head>
+<body onload="sorteia()">
+
+     <!--Aqui começa o Header-->
+
+    <header class="max-largura bg" id="Home">
+        <div class="container">
+            <nav class="menu">
+                <a href="/index.html"><div class="logo"></div></a>
+                <div class="AreaPrincipal-menu">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#Service"></a></li>
+                        <li><a href="#Contato"></a></li>
+                    </ul>
+                </div>
+
+                <div class="mobile-menu" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    <ul id="myLinks">
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#Service">Destaque</a></li>
+                        <li><a href="#Contato">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<section class="max-largura " id="Conteudo">
+    <div class="container bg2">
+        <div id="jogo">
+            <div class="containerPalavra">
+                <div class="editPalavras responsividadePalavras">
+                    <span>J</span>
+                    <span>O</span>
+                    <span>G</span>
+                    <span>O</span>
+                  
+                    <span class="espacoPalavra">F</span>
+                    <span>O</span>
+                    <span>R</span>
+                    <span>C</span>
+                    <span>A</span>
+                    </div>
+                </div>
+
+            <div id="tabeladiv">
+                <table border="0" id="tabela" class="fundoPrincipal" align="center">
+                    <tr>
+                        <td id="tabAcerto">
+                            <div id="acerto">ACERTOS: 0</div>
+                            <br>
+                            <div id="palcerta">PALAVRAS CERTAS: 0<br>PALAVRAS ERRADAS: 0 </div>
+                        </td>
+                        <td>
+                            <div id="forca" class="anima">
+                                <img src="../image/forca1.png" id="imagem" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                
+                <table border="0" id="tabela" align="center">
+                    <tr>
+                        <td>
+                            <br>
+                            <div id="tema">TEMA: Fruta</div>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+    
+                            <div id="tentativa">
+                                <form id="tenta" class="formForca">
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                
+    
+                <table border="0" id="tabela" align="center">
+    
+                    <tr>
+                        <td>
+                            <div id="letras">
+    
+                                <p>
+                                    <button type="button" id="Q" onmousedown="Confere('Q')" onmouseup="acabou ()">Q</button>
+                                    <button type="button" id="W" onmousedown="Confere('W')" onmouseup="acabou ()">W</button>
+                                    <button type="button" id="E" onmousedown="Confere('E')" onmouseup="acabou ()">E</button>
+                                    <button type="button" id="R" onmousedown="Confere('R')" onmouseup="acabou ()">R</button>
+                                    <button type="button" id="T" onmousedown="Confere('T')" onmouseup="acabou ()">T</button>
+                                    <button type="button" id="Y" onmousedown="Confere('Y')" onmouseup="acabou ()">Y</button>
+                                    <button type="button" id="U" onmousedown="Confere('U')" onmouseup="acabou ()">U</button>
+                                    <button type="button" id="I" onmousedown="Confere('I')" onmouseup="acabou ()">I</button>
+                                    <button type="button" id="O" onmousedown="Confere('O')" onmouseup="acabou ()">O</button>
+                                    <button type="button" id="P" onmousedown="Confere('P')" onmouseup="acabou ()">P</button>
+                                    <br><br>
+                                    <button type="button" id="A" onmousedown="Confere('A')" onmouseup="acabou ()">A</button>
+                                    <button type="button" id="S" onmousedown="Confere('S')" onmouseup="acabou ()">S</button>
+                                    <button type="button" id="D" onmousedown="Confere('D')" onmouseup="acabou ()">D</button>
+                                    <button type="button" id="F" onmousedown="Confere('F')" onmouseup="acabou ()">F</button>
+                                    <button type="button" id="G" onmousedown="Confere('G')" onmouseup="acabou ()">G</button>
+                                    <button type="button" id="H" onmousedown="Confere('H')" onmouseup="acabou ()">H</button>
+                                    <button type="button" id="J" onmousedown="Confere('J')" onmouseup="acabou ()">J</button>
+                                    <button type="button" id="K" onmousedown="Confere('K')" onmouseup="acabou ()">K</button>
+                                    <button type="button" id="L" onmousedown="Confere('L')" onmouseup="acabou ()">L</button>
+                                    <br><br>
+                                    <button type="button" id="Z" onmousedown="Confere('Z')" onmouseup="acabou ()">Z</button> 
+                                    <button type="button" id="X" onmousedown="Confere('X')" onmouseup="acabou ()">X</button>
+                                    <button type="button" id="C" onmousedown="Confere('C')" onmouseup="acabou ()">C</button>
+                                    <button type="button" id="V" onmousedown="Confere('V')" onmouseup="acabou ()">V</button>
+                                    <button type="button" id="B" onmousedown="Confere('B')" onmouseup="acabou ()">B</button>
+                                    <button type="button" id="N" onmousedown="Confere('N')" onmouseup="acabou ()">N</button>
+                                    <button type="button" id="M" onmousedown="Confere('M')" onmouseup="acabou ()">M</button>
+                                    <button type="button" id="-" onmousedown="Confere('-')" onmouseup="acabou ()">-</button>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Aqui Começa o footer-->
+
+<footer>
+    <div class="container">
+        <img src="../image/logo.png" alt="">
+        <p class="text-pq">Copyright © 2023 <span class="color-laranja">GGGAME</span> All Rights Reserved</p>
+        <p class="texto-pq">Tel: 4002-5922</p>
+    </div>
+</footer>
+
+<!--Aqui Termina o footer-->
+
+<script src="scriptForca.js"></script>
+    
+</body>
+</html>
